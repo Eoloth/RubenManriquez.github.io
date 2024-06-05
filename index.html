@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio of Rubén Luis Manríquez Sallés</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function copyToClipboard() {
+            const email = "ruben.msalles@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard!");
+            });
+        }
+
+        function openMailClient() {
+            window.location.href = "mailto:ruben.msalles@gmail.com";
+        }
+    </script>
 </head>
 <body>
     <h1>Rubén Luis Manríquez Sallés</h1>
     <p>Welcome to my portfolio.</p>
+    <div class="contact-info">
+        <p>Email: ruben.msalles@gmail.com 
+            <button onclick="copyToClipboard()">📋</button>
+            <button onclick="openMailClient()">✉️</button>
+        </p>
+    </div>
     <div class="project">
         <h2>Project 1: Data Management Application</h2>
         <p>Description: Development of a web application for managing large volumes of data.</p>
