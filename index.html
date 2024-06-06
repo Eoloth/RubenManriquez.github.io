@@ -6,6 +6,7 @@
     <title>Portfolio of Rubén Luis Manríquez Sallés</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     
     <script>
@@ -17,6 +18,19 @@
             elementsToToggle.forEach(element => element.classList.toggle('dark-mode'));
             localStorage.setItem('theme', theme);
         }
+        function copyEmail() {
+            const email = "ruben.msalles@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+
+        function sendEmail() {
+            window.location.href = "mailto:ruben.msalles@gmail.com";
+        }
+
 
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
@@ -68,9 +82,15 @@
         <p>Welcome to my portfolio.</p>
         <div>
             <p>Email: ruben.msalles@gmail.com 
-                <button onclick="copyToClipboard()" class="btn btn-outline-secondary btn-sm">📋</button>
-                <button onclick="openMailClient()" class="btn btn-outline-primary btn-sm">✉️</button>
+                <button id="copy-email" onclick="copyEmail()">
+                    <i class="fas fa-copy fa-2x"></i>
+                </button>
+                <button id="send-email" onclick="sendEmail()">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </button>
             </p>
+            
+            
         </div>
     </header>
 

@@ -1,3 +1,24 @@
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 24px; /* Aumentar el tamaño del botón */
+}
+
+button:focus {
+    outline: none;
+}
+
+button i {
+    color: #333; /* Cambiar el color del ícono si es necesario */
+}
+
+body.dark-mode button i {
+    color: #e0e0e0; /* Cambiar el color del ícono en modo oscuro */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
