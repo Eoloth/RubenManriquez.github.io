@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio of Rubén Luis Manríquez Sallés</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script>
         function copyToClipboard() {
@@ -20,45 +21,74 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <header class="my-4">
-            <h1 class="text-center">Rubén Luis Manríquez Sallés</h1>
-            <p class="text-center">Welcome to my portfolio.</p>
-            <div class="text-center">
-                <p>Email: ruben.msalles@gmail.com 
-                    <button onclick="copyToClipboard()" class="btn btn-outline-secondary btn-sm">📋 Copy</button>
-                    <button onclick="openMailClient()" class="btn btn-outline-primary btn-sm">✉️ Contact</button>
-                </p>
-            </div>
-        </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Rubén Luis Manríquez Sallés</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-        <section class="my-4">
-            <div class="card mb-4">
-                <div class="card-header">
-                    <h2>Project 1: Data Management Application</h2>
-                </div>
-                <div class="card-body">
-                    <p>Description: Development of a web application for managing large volumes of data.</p>
-                    <p>Technologies: Python, SQL, Flask, HTML, CSS</p>
-                    <p>Role: Fullstack Developer</p>
-                    <p>Contributions: Implemented backend logic using Flask. Created user interfaces with HTML and CSS. Optimized SQL queries for better performance.</p>
-                    <a href="https://github.com/Eoloth/project1" class="btn btn-primary">GitHub Repository</a>
+    <header class="text-center my-4">
+        <h1>Rubén Luis Manríquez Sallés</h1>
+        <p>Welcome to my portfolio.</p>
+        <div>
+            <p>Email: ruben.msalles@gmail.com 
+                <button onclick="copyToClipboard()" class="btn btn-outline-secondary btn-sm">📋 Copy</button>
+                <button onclick="openMailClient()" class="btn btn-outline-primary btn-sm">✉️ Contact</button>
+            </p>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card project-card mb-4">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Project Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1: Data Management Application</h5>
+                        <p class="card-text">Description: Development of a web application for managing large volumes of data.</p>
+                        <p class="card-text">Technologies: Python, SQL, Flask, HTML, CSS</p>
+                        <p class="card-text">Role: Fullstack Developer</p>
+                        <p class="card-text">Contributions: Implemented backend logic using Flask. Created user interfaces with HTML and CSS. Optimized SQL queries for better performance.</p>
+                        <a href="https://github.com/Eoloth/project1" class="btn btn-primary">GitHub Repository</a>
+                    </div>
                 </div>
             </div>
-            <div class="card mb-4">
-                <div class="card-header">
-                    <h2>Project 2: Security Monitoring System</h2>
-                </div>
-                <div class="card-body">
-                    <p>Description: System to monitor and verify VPN usage and generate security reports.</p>
-                    <p>Technologies: Python, Google Drive API, Google Studio</p>
-                    <p>Role: Information Security Intern</p>
-                    <p>Contributions: Developed scripts to monitor whitelists and VPN usage. Integrated with Google Drive and Google Studio for report generation.</p>
-                    <a href="https://github.com/Eoloth/project2" class="btn btn-primary">GitHub Repository</a>
+            <div class="col-md-6">
+                <div class="card project-card mb-4">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Project Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2: Security Monitoring System</h5>
+                        <p class="card-text">Description: System to monitor and verify VPN usage and generate security reports.</p>
+                        <p class="card-text">Technologies: Python, Google Drive API, Google Studio</p>
+                        <p class="card-text">Role: Information Security Intern</p>
+                        <p class="card-text">Contributions: Developed scripts to monitor whitelists and VPN usage. Integrated with Google Drive and Google Studio for report generation.</p>
+                        <a href="https://github.com/Eoloth/project2" class="btn btn-primary">GitHub Repository</a>
+                    </div>
                 </div>
             </div>
-            <!-- Add more projects as needed -->
-        </section>
-    </div>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
