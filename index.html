@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    
     <script>
         function toggleTheme() {
             const body = document.body;
+            const elementsToToggle = document.querySelectorAll('header, .card-body, .project-card .card-title, .project-card .card-text');
             const theme = body.classList.toggle('dark-mode') ? 'dark' : 'light';
+            
+            elementsToToggle.forEach(element => element.classList.toggle('dark-mode'));
             localStorage.setItem('theme', theme);
         }
 
@@ -18,9 +22,14 @@
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
+                const elementsToToggle = document.querySelectorAll('header, .card-body, .project-card .card-title, .project-card .card-text');
+                elementsToToggle.forEach(element => element.classList.add('dark-mode'));
                 document.getElementById('theme-switch').checked = true;
             }
         });
+
+
+
     </script>
 </head>
 <body>
@@ -55,11 +64,12 @@
 
     <header class="text-center my-4">
         <h1>Rubén Luis Manríquez Sallés</h1>
+        <h2>Software Engineer</h2>
         <p>Welcome to my portfolio.</p>
         <div>
             <p>Email: ruben.msalles@gmail.com 
-                <button onclick="copyToClipboard()" class="btn btn-outline-secondary btn-sm">📋 Copy</button>
-                <button onclick="openMailClient()" class="btn btn-outline-primary btn-sm">✉️ Contact</button>
+                <button onclick="copyToClipboard()" class="btn btn-outline-secondary btn-sm">📋</button>
+                <button onclick="openMailClient()" class="btn btn-outline-primary btn-sm">✉️</button>
             </p>
         </div>
     </header>
