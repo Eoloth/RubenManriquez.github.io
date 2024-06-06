@@ -10,28 +10,17 @@
     <script>
         function toggleTheme() {
             const body = document.body;
-            const theme = body.classList.toggle('dark-mode') ? 'dark' : 'light' ;
+            const theme = body.classList.toggle('dark-mode') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
         }
 
-        document.addEventListener('DOMCOntentLoader', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme == 'dark') {
+            if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
                 document.getElementById('theme-switch').checked = true;
             }
-        })
-
-        function copyToClipboard() {
-            const email = "ruben.msalles@gmail.com";
-            navigator.clipboard.writeText(email).then(() => {
-                alert("Email copied to clipboard!");
-            });
-        }
-
-        function openMailClient() {
-            window.location.href = "mailto:ruben.msalles@gmail.com";
-        }
+        });
     </script>
 </head>
 <body>
@@ -53,6 +42,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch" onclick="toggleTheme()">
+                        <span class="slider round"></span>
+                    </label>
                 </li>
             </ul>
         </div>
